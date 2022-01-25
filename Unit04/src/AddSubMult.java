@@ -2,18 +2,19 @@
 //www.apluscompsci.com
 //Name -
 
-import static java.lang.System.*; 
+import static java.lang.System.*;
 import java.util.Scanner;
 
-public class AddSubMult
-{
-	public static double check( double a, double b )
-	{
-		if(a > b) {
-			return a - b;
+public class AddSubMult {
+	public static double check(double a, double b) {
+		double answer;
+		if (a > b) {
+			answer = a - b;
 		} else if (b > a) {
-			return b - a;
+			answer = b - a;
+		} else {
+			answer = a * b;
 		}
-		return a * b;
+		return Math.floor(answer * 10) / 10;
 	}
 }
